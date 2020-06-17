@@ -17,6 +17,7 @@ hexcurse \
 ##Install Docker client
 RUN curl -fsSLk https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
 
-COPY run.sh /bin/run.sh
+COPY *.sh /bin/
+chmod +x /bin/*.sh
 CMD /bin/run.sh
 
