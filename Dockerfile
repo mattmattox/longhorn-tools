@@ -11,12 +11,11 @@ htop \
 nmon \
 sysstat \
 smartmontools \
-hexdump \
 hexcurse \
 && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ##Install Docker client
-RUN curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
+RUN curl -fsSLk https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
 
 COPY run.sh /bin/run.sh
 CMD /bin/run.sh
